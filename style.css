@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap');
+
+/* ========== 1. VARIABEL WARNA & UKURAN ========== */
+:root {
+    --bg: #eef1ec;          /* latar halaman: hijau pucat */
+    --card: #ffffff;
+    --ink: #1f2d27;         /* teks & header tabel: hijau tua */
+    --muted: #6b7a72;
+    --line: #dde3dd;
+    --accent: #e0a31b;      /* kunyit: warna aksen */
+    --green: #2e9e5b;
+    --green-dark: #23804a;
+    --orange: #e0891b;
+    --orange-dark: #bf7212;
+    --red: #d64545;
+    --red-dark: #b53636;
+    --gray: #7b8780;
+    --gray-dark: #626d67;
+    --radius: 12px;
+}
+
+/* ========== 2. RESET & DASAR ========== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    line-height: 1.6;
+    padding: clamp(12px, 4vw, 32px);   /* otomatis mengecil di HP */
+}
+
+/* ========== 3. KARTU UTAMA ========== */
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    background: var(--card);
+    padding: clamp(18px, 4vw, 32px);
+    border-radius: 16px;
+    border-top: 6px solid var(--accent);
+    box-shadow: 0 10px 30px rgba(31, 45, 39, 0.08);
+}
+
+h2 {
+    font-family: 'Fraunces', serif;
+    font-size: clamp(1.4rem, 4vw, 1.9rem);
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--line);
+}
+
+/* ========== 4. TOMBOL ========== */
+.btn {
+    display: inline-block;
+    padding: 9px 18px;
+    border: none;
+    border-radius: 999px;            /* bentuk pil */
+    font: 500 14px 'DM Sans', sans-serif;
+    text-decoration: none;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.15s;
+}
+.btn:hover  { transform: translateY(-1px); }
+.btn:active { transform: translateY(0); }
+
+.btn-tambah { background: var(--green);  margin-bottom: 20px; }
+.btn-tambah:hover { background: var(--green-dark); }
+
+.btn-edit  { background: var(--orange); }
+.btn-edit:hover  { background: var(--orange-dark); }
+
+.btn-hapus { background: var(--red); }
+.btn-hapus:hover { background: var(--red-dark); }
+
+.btn-batal { background: var(--gray); margin-left: 10px; }
+.btn-batal:hover { background: var(--gray-dark); }
+
+/* ========== 5. TABEL ========== */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+th, td {
+    padding: 14px 16px;
+    text-align: left;
+    border-bottom: 1px solid var(--line);
+}
+
+th {
+    background: var(--ink);
+    color: #fff;
+    font-weight: 500;
+    font-size: 14px;
+}
+th:first-child { border-top-left-radius: 10px; }
+th:last-child  { border-top-right-radius: 10px; }
+
+tbody tr { transition: background-color 0.15s; }
+tbody tr:hover { background: #f6f8f5; }
+
+/* ========== 6. FORM ========== */
+.form-group { margin-bottom: 18px; }
+
+.form-group label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 11px 14px;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    background: #fafbf9;
+    font: inherit;
+    color: inherit;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--accent);
+    background: #fff;
+    box-shadow: 0 0 0 4px rgba(224, 163, 27, 0.2);
+}
+
+/* Fokus keyboard tetap terlihat pada tombol & link */
+.btn:focus-visible {
+    outline: 3px solid var(--accent);
+    outline-offset: 2px;
+}
+
+/* ========== 7. RESPONSIVE (HP) ========== */
+@media (max-width: 640px) {
+
+    /* Tabel berubah jadi kartu per baris */
+    table, thead, tbody, tr, th, td { display: block; }
+
+    thead { display: none; }   /* header tabel disembunyikan */
+
+    tr {
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        margin-bottom: 14px;
+        padding: 6px 0;
+    }
+
+    td {
+        display: flex;
+        justify-content: space-between;
+        gap: 16px;
+        border-bottom: 1px dashed var(--line);
+        padding: 10px 16px;
+        text-align: right;
+    }
+    td:last-child { border-bottom: none; }
+
+    /* Label kolom diambil dari atribut data-label di HTML */
+    td::before {
+        content: attr(data-label);
+        font-weight: 700;
+        color: var(--muted);
+        text-align: left;
+    }
+
+    .btn-batal { margin-left: 0; margin-top: 10px; }
+}
+
+/* ========== 8. AKSESIBILITAS ========== */
+@media (prefers-reduced-motion: reduce) {
+    * { transition: none !important; }
+}

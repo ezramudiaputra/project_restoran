@@ -1,0 +1,137 @@
+
+/* ============================================
+   HERO SECTION - SIMPLE VERSION
+   Bagian utama halaman Home
+   ============================================ */
+
+.hero {
+    position: relative;
+
+    /* Menghilangkan background gambar */
+    background: var(--bg) !important;
+    background-image: none !important;
+
+    min-height: 430px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+
+    padding: 60px clamp(28px, 7vw, 100px);
+
+    overflow: hidden;
+}
+
+/* Menghilangkan lapisan gradient */
+.hero::before,
+.hero::after {
+    display: none !important;
+    content: none !important;
+}
+
+/* Posisi teks utama */
+.hero-inner {
+    position: relative;
+    z-index: 1;
+
+    max-width: 680px;
+    right: 0;
+
+    text-align: right;
+}
+
+/* Informasi restoran */
+.hero-badge {
+    display: inline-block;
+
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 3px;
+
+    color: var(--accent-dark);
+    border: 1.5px solid var(--accent-dark);
+
+    padding: 5px 14px;
+    margin-bottom: 22px;
+
+    text-transform: uppercase;
+}
+
+/* Judul utama */
+.hero-title {
+    font-family: var(--font-display);
+
+    font-size: clamp(46px, 9vw, 100px);
+    font-weight: 900;
+
+    color: var(--black);
+
+    line-height: 1;
+    letter-spacing: 1px;
+
+    margin-bottom: 22px;
+}
+
+/* Warna tulisan Story */
+.hero-title em {
+    font-style: italic;
+    color: var(--accent-dark);
+}
+
+/* Scroll indicator */
+.hero-scroll-hint {
+    position: absolute;
+    bottom: 28px;
+    left: 36px;
+
+    z-index: 1;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.hero-scroll-hint span {
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 3px;
+
+    color: var(--gray);
+
+    writing-mode: vertical-rl;
+}
+
+.scroll-line {
+    width: 1px;
+    height: 48px;
+
+    background: linear-gradient(
+        to bottom,
+        var(--gray),
+        transparent
+    );
+}
+
+/* Tampilan HP */
+@media (max-width: 560px) {
+
+    .hero {
+        min-height: 350px;
+        padding: 40px 22px;
+    }
+
+    .hero-inner {
+        right: 0;
+    }
+
+    .hero-title {
+        font-size: clamp(42px, 12vw, 65px);
+    }
+
+    .hero-scroll-hint {
+        display: none;
+    }
+
+}

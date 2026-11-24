@@ -55,7 +55,7 @@ if (isset($_POST['login'])) {
                 <input type="password" name="password" required placeholder="Masukkan password">
             </div>
             <button type="submit" name="login" class="btn btn-tambah" style="width: 100%;">Login</button>
-        </form>
+        </form>G
     </div>
 
 </body>

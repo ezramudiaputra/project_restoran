@@ -8,7 +8,7 @@ if (isset($_SESSION['login'])) {
     exit();
 }
 
-$error = false;lllllll
+$error = false;
 
 if (isset($_POST['login'])) {
     $username = $_POST['username'];

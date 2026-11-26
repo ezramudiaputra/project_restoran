@@ -184,12 +184,32 @@ body {
 }
 
 /* Harga makanan */
-.food-info p {
+.food-info .food-price {
     font-size: 26px;
     font-weight: bold;
-
     color: #e9271b;
-    margin: 0;
+    margin: 0 0 12px;
+}
+
+/* Kategori makanan */
+.food-info .food-category {
+    display: inline-block;
+    background: #f8f5f1;
+    color: #2b2b4f;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+/* Deskripsi makanan */
+.food-info .food-description {
+    font-size: 15px;
+    font-weight: normal;
+    color: #666666;
+    line-height: 1.6;
+    margin-top: 12px;
+    margin-bottom: 0;
 }
 
 

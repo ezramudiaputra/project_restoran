@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HIHUU - Restorant</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body{
+            margin:0;
+            padding-top:80px;
+            font-family:Arial, sans-serif;
+            background:#f8f9fa;
+        }
+
+        .navbar{
+            background:rgba(0,0,0,0.55) !important;
+        }
+
+        .about{
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            gap:60px;
+            padding:60px 80px;
+            min-height:80vh;
+        }
+
+        .about-image{
+            flex:1;
+        }
+
+        .about-image img{
+            width:100%;
+            border-radius:20px;
+            display:block;
+        }
+
+        .about-content{
+            flex:1;
+        }
+
+        .about-content h1{
+            font-size:60px;
+            font-weight:700;
+            color:#2d3157;
+            margin-bottom:25px;
+        }
+
+        .about-content p{
+            font-size:22px;
+            color:#666;
+            line-height:1.8;
+        }
+
+        @media(max-width:768px){
+            .about{
+                flex-direction:column;
+                padding:30px;
+            }
+
+            .about-content h1{
+                font-size:40px;
+            }
+
+            .about-content p{
+                font-size:18px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">HIHUU RESTAURANT</a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="menu">
+                <ul class="navbar-nav ms-auto">
+                    <li><a class="nav-link" href="index.html">Home</a></li>
+                    <li><a class="nav-link active" href="about.html">About</a></li>
+                    <li><a class="nav-link" href="menu.html">Menu</a></li>
+                    <li><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- About -->
+    <section class="about">
+
+        <div class="about-image">
+            <img src="images/img-newhihuu.jpg" alt="About">
+        </div>
+
+        <div class="about-content">
+            <h1>Sejarah HIHUU RESTAURANT</h1>
+
+            <p>
+                HIHUU RESTAURANT berdiri pada tahun 1976 di djakarta, dikala itu sudah banyak
+                pesaing restoran lainnya, tetapi HIHUU RESTAURANT sudah mengalami ujian dari
+                semua cobaan, tetapi HIHUU RESTAURANT tetap terus belajar dari kesalahan, oleh
+                karena itu HIHUU RESTAURANT berdiri sampai detik ini 
+            </p>
+        </div>
+
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

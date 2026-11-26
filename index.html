@@ -1,225 +1,55 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HIHUU RESTAURANT</title>
 
-    <!-- Informasi website -->
-    <meta name="description" content="HIHUU Restaurant & Caffe - Enjoy delicious food and a comfortable dining experience.">
-
-    <title>HIHUU Restaurant & Caffe</title>
-
-    <!-- Favicon website -->
-    <link rel="icon" type="image/svg+xml"
-        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180 97'%3E%3Cpath fill='%23999c68' d='M92 75c0-12.15 9.85-22 22-22h22v22c0 12.15-9.85 22-22 22H92V75Z'/%3E%3C/svg%3E">
-
-    <!-- Menghubungkan CSS utama -->
-    <link rel="stylesheet" href="./css/style.css">
-
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
-    <!-- =====================================
-         NAVBAR
-         Logo dan menu navigasi website
-         ===================================== -->
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">HIHUU RESTAURANT</a>
 
-    <nav class="topnav" id="myTopnav">
-
-        <!-- Logo restoran -->
-        <div class="nav-top-row">
-            <div class="logo">SPICE HAVEN</div>
-
-            <!-- Tombol menu untuk tampilan HP -->
-            <button class="nav-hamburger"
-                id="navHamburger"
-                aria-label="Toggle menu">
-                &#9776;
+            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
+                <span class="navbar-toggler-icon"></span>
             </button>
+
+            <div class="collapse navbar-collapse" id="menu">
+                <ul class="navbar-nav ms-auto">
+                    <li><a class="nav-link active" href="index.html">Home</a></li>
+                    <li><a class="nav-link" href="about.html">About</a></li>
+                    <li><a class="nav-link" href="menu.html">Menu</a></li>
+                    <li><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
         </div>
-
-        <!-- Menu navigasi -->
-        <div class="nav-links" id="navLinks">
-
-            <a href="index.html" class="active">HOME</a>
-
-            <a href="menu.html">MENU</a>
-
-            <a href="about.html">ABOUT</a>
-
-            <a href="about.html#contact">CONTACT</a>
-
-            <a href="book-a-table.html">BOOK A TABLE</a>
-
-        </div>
-
     </nav>
 
+    <!-- Hero -->
+    <section class="hero">
 
-    <!-- =====================================
-         HERO SECTION
-         Bagian utama halaman Home
-         ===================================== -->
+        <div class="overlay"></div>
 
-    <section class="hero" id="heroSection">
+        <div class="hero-content">
+            <h1>Selamat Datang</h1>
+            <p>Apa yang kamu mau pesan</p>
 
-        <div class="hero-inner">
-
-            <!-- Informasi singkat restoran -->
-            <div class="hero-badge">
-                &#10022; Est. 2010 &nbsp;&middot;&nbsp; San Francisco
-            </div>
-
-            <!-- Judul utama halaman -->
-            <h1 class="hero-title">
-                Where Every<br>
-                Spice Tells<br>
-                a <em>Story</em>
-            </h1>
-
-        </div>
-
-        <!-- Petunjuk scroll halaman -->
-        <div class="hero-scroll-hint">
-
-            <span>SCROLL</span>
-
-            <div class="scroll-line"></div>
-
+        <a href="menu.html" class="btn btn-primary btn-lg">
+            Klik to menu →
+        </a>
         </div>
 
     </section>
 
-
-    <!-- =====================================
-         MENU INTRODUCTION
-         Pengenalan menu restoran
-         ===================================== -->
-
-    <section class="about">
-
-        <!-- Judul bagian menu -->
-        <div class="big-text">
-            OUR MENU
-        </div>
-
-        <!-- Deskripsi menu -->
-        <div class="small-text">
-
-            <p>
-                From fragrant biryanis to slow-cooked curries,
-                our menu is a celebration of India's rich culinary
-                heritage. Every dish is crafted with authentic spices,
-                fresh ingredients, and generations of tradition
-                — bringing the soul of Indian cooking straight
-                to your table.
-            </p>
-
-            <!-- Link menuju halaman menu -->
-            <a href="menu.html">
-                <b>EXPLORE MENU</b>
-            </a>
-
-        </div>
-
-    </section>
-
-
-    <!-- =====================================
-         FOOTER
-         Informasi restoran dan navigasi
-         ===================================== -->
-
-    <footer class="footer">
-
-        <!-- Logo footer -->
-        <div class="footer-logo">
-
-            <svg preserveAspectRatio="xMidYMid meet"
-                viewBox="0 0 180 97"
-                xmlns="http://www.w3.org/2000/svg"
-                aria-hidden="true">
-
-                <path fill="#000"
-                    d="M92 75c0-12.15 9.85-22 22-22h22v22c0 12.15-9.85 22-22 22H92V75Z"/>
-
-                <path fill="#000"
-                    d="M136 31c0-12.15 9.85-22 22-22h22v22c0 12.15-9.85 22-22 22h-22V31Z"/>
-
-                <path fill="#000"
-                    d="M88 75c0-12.15-9.85-22-22-22H44v22c0 12.15 9.85 22 22 22h22V75Z"/>
-
-                <path fill="#000"
-                    d="M44 31c0-12.15-9.85-22-22-22H0v22c0 12.15 9.85 22 22 22h22V31Z"/>
-
-                <path fill="#000"
-                    d="M74.556 46.67c-8.591-8.592-8.591-22.522 0-31.113L90.113 0l15.556 15.556c8.592 8.591 8.592 22.521 0 31.113L90.113 62.226 74.556 46.67Z"/>
-
-            </svg>
-
-        </div>
-
-
-        <!-- Isi informasi footer -->
-        <div class="footer-box">
-
-            <!-- Nama restoran -->
-            <div class="footer-box1">
-
-                <p>
-                    HIHUU RESTAURANT<br>
-                    &amp; CAFFE
-                </p>
-
-                <b>HIHUU HAVEN</b>
-
-            </div>
-
-
-            <!-- Alamat dan informasi kontak -->
-            <div class="footer-box2">
-
-                A: 500 Terry Francine St.<br>
-                San Francisco CA 94158<br>
-
-                T: 123-456-7890<br>
-
-                E: hello@hihuu.com<br><br>
-
-                Mon-Sun: 12:00 PM - 10:30 PM
-
-            </div>
-
-
-            <!-- Navigasi footer -->
-            <div class="footer-box3">
-
-                <a href="index.html">HOME</a>
-
-                <a href="menu.html">MENU</a>
-
-                <a href="about.html">ABOUT</a>
-
-                <a href="about.html#contact">CONTACT</a>
-
-                <a href="book-a-table.html">BOOK A TABLE</a>
-
-                <a href="#!">INSTAGRAM</a>
-
-                <a href="#!">FACEBOOK</a>
-
-            </div>
-
-        </div>
-
-    </footer>
-
-
-    <!-- Menghubungkan JavaScript -->
-    <script src="js/main.js"></script>
+    <script src="js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 
